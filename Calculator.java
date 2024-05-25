@@ -1,10 +1,14 @@
 import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) throws Exception {
+        System.out.println("Введите число или строку:");
         Scanner sca = new Scanner(System.in);
         String exp = sca.nextLine();
         char action;
         String [] data;
+        if (exp.length() > 10) {
+            throw new Exception("Вводная строка не должна быть длиннее 10 символов");
+        }
         if (exp.contains("+")) {
             data = exp.split("\\+");
             action = '+';
