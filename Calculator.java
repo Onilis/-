@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) throws Exception {
-        System.out.println("Введите выражение");
+        System.out.println("Введи выражение");
 
         Scanner scn = new Scanner(System.in);
         String exp = scn.nextLine();
@@ -24,7 +24,7 @@ public class Calculator {
             throw new Exception("Некорректный знак действия");
         }
         if (action == '*' || action == '/') {
-            if (data[1].contains("\"")) throw new Exception("Строку можно делить или умножать только на число");
+            if (data[1].contains("\"")) throw new Exception("Строку можно делить или умножать на число");
         }
         for (int i = 0; i < data.length; i++) {
             data[i] = data[i].replace("\"", "");
@@ -60,9 +60,9 @@ public class Calculator {
             printInQuotes(result);
         }
         if (data[0].length() > 10)
-            throw new Exception("Введено больше 10 символов");
+            throw new Exception("Больше 10 символов");
         if (data[1].length() > 10)
-            throw new Exception("Введено больше 10 символов");
+            throw new Exception("Больше 10 символов");
     }
 
     static void printInQuotes(String text){
